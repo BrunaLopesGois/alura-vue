@@ -14,18 +14,13 @@ export default {
   data() {
     return {
       titulo: "AluraPic",
-      fotos: [
-        {
-          url:
-            "https://matsudapet.com.br/blog/wp-content/uploads/2019/08/shutterstock_559799125-compressed.jpg",
-          titulo: "cachorro-fofo",
-        },
-        {
-          url: "https://bsp.org.br/wp-content/uploads/2015/10/c%C3%A3o1.jpg",
-          titulo: "cachorrinho",
-        },
-      ],
+      fotos: [],
     };
+  },
+  created() {
+    this.$http.get("http://localhost:3000/v1/fotos")
+    .then(res => res.json())
+    .then(fotos => (this.fotos = fotos, err => console.log(err)));
   },
 };
 </script>
