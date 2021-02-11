@@ -9,9 +9,13 @@
       placeholder="filtre por parte do título"
     />
     <ul class="lista-fotos">
-      <li class="lista-fotos-item" v-for="foto of fotosComFiltro" :key="foto">
+      <li class="lista-fotos-item" v-for="(foto, id) of fotosComFiltro" :key="id">
         <meu-painel :titulo="foto.titulo">
-          <imagem-responsiva :url="foto.url" :titulo="foto.titulo" />
+          <imagem-responsiva
+            v-meu-transform:rotaciona.animacao="15"
+            :url="foto.url"
+            :titulo="foto.titulo"
+          />
           <meu-botao
             tipo="button"
             rotulo="REMOVER"
