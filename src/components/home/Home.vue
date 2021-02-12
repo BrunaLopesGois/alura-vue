@@ -12,7 +12,7 @@
       <li class="lista-fotos-item" v-for="(foto, id) of fotosComFiltro" :key="id">
         <meu-painel :titulo="foto.titulo">
           <imagem-responsiva
-            v-meu-transform:rotaciona.animacao="15"
+            v-meu-transform:escala.animacao="1.2"
             :url="foto.url"
             :titulo="foto.titulo"
           />

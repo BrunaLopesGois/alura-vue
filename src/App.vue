@@ -39,6 +39,6 @@ export default {
 
 .pagina-enter-active,
 .pagina-leave-active {
-  transition: opacity 2s;
+  transition: opacity 0.6s;
 }
 </style>
