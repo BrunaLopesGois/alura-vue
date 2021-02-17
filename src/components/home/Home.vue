@@ -1,6 +1,7 @@
 
 <template>
   <div>
+    <img src="/static/download.jpeg" alt="">
     <h1 class="centralizado">{{ titulo }}</h1>
     <p v-show="mensagem" class="centralizado">{{ mensagem }}</p>
     <input
